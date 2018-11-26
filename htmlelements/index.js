@@ -4,13 +4,14 @@ select.render();
 
 
 function addItem() {
-    const item = document.querySelector('#item').value;
-    select.addItem(item);
+    const element = document.querySelector('#item');
+    select.addItem(element.value);
+    element.value = '';
     select.render();
 }
 
 function removeItem() {
-    const item = document.querySelector('#item').value;
+    const item = document.querySelector('#selectContainer select').value;
     select.removeItem(item);
     select.render();
 }
